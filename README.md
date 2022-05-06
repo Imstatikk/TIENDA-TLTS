@@ -3,7 +3,7 @@
 <h1 text-align="center">Tienda proyecto desarrollo web coderhouse-Gonzalo Lynch</h1>
 <h3 text-align="center">Este proyecto está destinado a una tienda de ropa</h3>
 
-- Proyecto [TLTS-TIENDA MULTIMARCA]( https://imstatikk.github.io/tlts/)
+- Proyecto [https://imstatikk.github.io/TIENDA-TLTS/]( https://imstatikk.github.io/tlts/)
 
 <p text-align="left">
 </p>
