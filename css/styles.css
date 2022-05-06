@@ -251,13 +251,6 @@ h1 {
     
 }
 
-.novedades h3 {
-    color: rgb(0, 0, 0);
-    text-align: start;
-    font-size: 25px;
-    margin: 5px;
-
-}
 
 .novedades a {
     text-decoration: none;
@@ -297,14 +290,16 @@ h1 {
 }
 
 .accordion-item button{
-    width: 500px;
+    width: 700px;
     display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 30px;
 
 }
 .accordion-body{
-    width: 500px;
+    width: 700px;
+    font-size: 25px;
 }
 .accordion {
   
