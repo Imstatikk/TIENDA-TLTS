@@ -1,0 +1,28 @@
+$flexs:(
+    dp:flex,
+    flexD:column,
+    justifyI:center,
+    alignI:center,
+    justifyS:space-around,
+    
+);
+.pie {
+    grid-area: footer;
+    h2 {
+        display: map-get($map: $flexs, $key:dp );
+        justify-content: map-get($map: $flexs, $key:justifyI );
+
+        margin-top: 30px;
+    }
+    div {
+        display: map-get($map: $flexs, $key:dp );
+                    justify-content:map-get($map: $flexs, $key:justifyI ) ;
+        a{
+            img {
+                width: 60px;
+                height: 60px;
+                margin: 30px;
+            }
+        }
+    }
+}

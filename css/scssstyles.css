@@ -1,208 +1,233 @@
-body {
-    background-color: white;
-}
-
-.headerNav {
-    grid-area: header;
-    background-color: white;
-    width: 100%;
-}
-
-.headerNav nav div {
-    background-color: white;
-}
-
-.headerNav nav div div button {
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.headerNav nav div div button:hover {
-    background-color: white;
-    color: black;
-    border: black solid 1px;
-}
-
-.headerNav nav div div form {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-}
-
-.headerNav nav div div ul {
-    font-style: italic;
-    list-style: none;
-}
-
-.headerNav nav div div ul li {
-    margin-top: 30px;
-    margin-right: 20px;
-}
-
-.headerNav nav div div ul li a {
-    color: black;
-    text-decoration: none;
-    font-size: 30px;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: 0.3s;
-}
-
-.headerNav nav div div ul li a:hover {
-    background-size: 100% 2px;
-}
-
-.main {
-    grid-area: main;
-}
-
-.main .novedades {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-}
-
-.main .novedades div {
-    margin-top: 10px;
-}
-
-.main .novedades div div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main .novedades div div div .card {
-    border-radius: 0px;
-    border: none;
-    box-shadow: 0 0 10px 1px #eeeded;
-}
-
-.main .novedades div div div .card img {
-    transition: 0.5s;
-    height: 300px;
-    width: 300px;
-    margin-top: 40px;
-}
-
-.main .novedades div div div .card img:hover {
-    transform: scale(1.05);
-}
-
-.main .novedades div div div .card div {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.main .novedades div div div .card div a {
-    text-decoration: none;
-    background-color: black;
-    color: white;
-    width: 80px;
-    margin-top: 25px;
-}
-
-.main .novedades div div div .card div a:hover {
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 3px;
-    color: black;
-}
-
-.main .novedades div div div .card div .card-text {
-    text-align: center;
-}
-
-.main .novedades h2 {
-    text-align: center;
-    color: black;
-    font-size: 50px;
-    background-image: linear-gradient(to left, white, #a8f86a, white);
-    margin-top: 10px;
-    width: 100%;
-}
-
-.main .novedades h1 {
-    background-color: black;
-    font-size: 60px;
-    color: chartreuse;
-    text-align: center;
-    animation-duration: 0.7s;
-    animation-delay: 1ms;
-    animation-iteration-count: 1;
-    animation-name: agrandar;
-    animation-timing-function: ease-in;
-    margin-top: 45px;
-    height: 80px;
-}
-
-@keyframes agrandar {
-    0% {
-        font-size: 10px;
-    }
-
-    10% {
-        font-size: 15px;
-    }
-
-    20% {
-        font-size: 20px;
-    }
-
-    30% {
-        font-size: 25px;
-    }
-
-    40% {
-        font-size: 30px;
-    }
-
-    50% {
-        font-size: 35px;
-    }
-
-    60% {
-        font-size: 40px;
-    }
-
-    70% {
-        font-size: 45px;
-    }
-
-    80% {
-        font-size: 50px;
-    }
-
-    90% {
-        font-size: 55px;
-    }
-
-    100% {
-        font-size: 60px;
-    }
-}
-
 #grilla {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr auto 0.5fr;
-    grid-template-areas: "header header header"
-        "main main main"
-        "footer footer footer";
-}
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr auto 0.5fr;
+  grid-template-areas: "header header header" "main main main" "footer footer footer"; }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "bebas";
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "bebas"; }
+
+/*------MAP------*/
+.borderIconstwitter {
+  border: 1px solid #00bbff;
+  border-radius: 5px;
+  margin: 5px; }
+
+.borderIconsfacebook {
+  border: 1px solid #0051ff;
+  border-radius: 5px;
+  margin: 5px; }
+
+.borderIconsinstagram {
+  border: 1px solid orange;
+  border-radius: 5px;
+  margin: 5px; }
+
+.borderIconsicono {
+  border: 1px solid lime;
+  border-radius: 5px;
+  margin: 5px; }
+
+/*-------MAP-GET-------*/
+/*-----EXTEND-----*/
+.boton, .botonCard, .botonInput {
+  width: 100px;
+  height: 35px;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px; }
+  .boton:hover, .botonCard:hover, .botonInput:hover {
+    background-color: white;
+    color: black; }
+
+.botonCard {
+  background-color: black;
+  color: #59fc6c; }
+
+.botonInput {
+  background-color: white;
+  color: black;
+  margin: 5px; }
+  .botonInput:hover {
+    background-color: black;
+    color: white; }
+
+/*------MIXIN------*/
+h1 {
+  background-color: black;
+  font-size: 60px;
+  color: chartreuse;
+  animation-duration: 0.7s;
+  animation-delay: 1ms;
+  animation-iteration-count: 1;
+  animation-name: agrandar;
+  animation-timing-function: ease-in;
+  margin-top: 45px;
+  height: 80px;
+  text-align: center;
+  margin-top: 10px; }
+
+h2 {
+  text-align: center;
+  margin-top: 10px;
+  color: black;
+  font-size: 50px;
+  background-image: linear-gradient(to left, white, #a8f86a, white);
+  margin-top: 10px;
+  width: 100%; }
+
+h5 {
+  text-align: center;
+  margin-top: 10px; }
+
+/*----*/
+body {
+  background-color: white; }
+
+.headerNav {
+  grid-area: header;
+  background-color: white;
+  width: 100%; }
+  .headerNav nav div {
+    background-color: white; }
+    .headerNav nav div div button {
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .headerNav nav div div button:hover {
+        background-color: white;
+        color: black;
+        border: black solid 1px; }
+    .headerNav nav div div form {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px; }
+    .headerNav nav div div ul {
+      font-style: italic;
+      list-style: none; }
+      .headerNav nav div div ul li {
+        margin-top: 30px;
+        margin-right: 20px; }
+        .headerNav nav div div ul li a {
+          color: black;
+          text-decoration: none;
+          font-size: 30px;
+          background-image: linear-gradient(currentColor, currentColor);
+          background-position: 0% 100%;
+          background-repeat: no-repeat;
+          background-size: 0% 2px;
+          transition: 0.3s; }
+          .headerNav nav div div ul li a:hover {
+            background-size: 100% 2px; }
+
+.main {
+  grid-area: main; }
+  .main .novedades {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column; }
+    .main .novedades div {
+      margin-top: 10px; }
+      .main .novedades div div {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .main .novedades div div div .card {
+          border-radius: 0px;
+          border: none;
+          box-shadow: 0 0 10px 1px #eeeded; }
+          .main .novedades div div div .card img {
+            transition: 0.5s;
+            height: 300px;
+            width: 300px;
+            margin-top: 40px; }
+            .main .novedades div div div .card img:hover {
+              transform: scale(1.05); }
+          .main .novedades div div div .card div {
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .main .novedades div div div .card div .card-text {
+              color: black;
+              margin: 7px; }
+            .main .novedades div div div .card div a {
+              text-decoration: none;
+              background-color: black;
+              color: white;
+              width: 80px;
+              margin-top: 25px; }
+              .main .novedades div div div .card div a:hover {
+                background-color: white;
+                border: 1px solid black;
+                border-radius: 3px;
+                color: black; }
+            .main .novedades div div div .card div .card-text {
+              text-align: center; }
+    .main .novedades h2 {
+      text-align: center;
+      color: black;
+      font-size: 50px;
+      background-image: linear-gradient(to left, white, #a8f86a, white);
+      margin-top: 10px;
+      width: 100%; }
+    .main .novedades h1 {
+      background-color: black;
+      font-size: 60px;
+      color: chartreuse;
+      text-align: center;
+      animation-duration: 0.7s;
+      animation-delay: 1ms;
+      animation-iteration-count: 1;
+      animation-name: agrandar;
+      animation-timing-function: ease-in;
+      margin-top: 45px;
+      height: 80px; }
+
+@keyframes agrandar {
+  0% {
+    font-size: 10px; }
+  10% {
+    font-size: 15px; }
+  20% {
+    font-size: 20px; }
+  30% {
+    font-size: 25px; }
+  40% {
+    font-size: 30px; }
+  50% {
+    font-size: 35px; }
+  60% {
+    font-size: 40px; }
+  70% {
+    font-size: 45px; }
+  80% {
+    font-size: 50px; }
+  90% {
+    font-size: 55px; }
+  100% {
+    font-size: 60px; } }
+
+.pie {
+  grid-area: footer; }
+  .pie h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; }
+  .pie div {
+    display: flex;
+    justify-content: center; }
+    .pie div a img {
+      width: 60px;
+      height: 60px;
+      margin: 30px; }

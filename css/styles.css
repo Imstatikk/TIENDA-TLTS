@@ -228,20 +228,8 @@ h1 {
     text-align: center;
 
 }
-.card-body a{
-    background-color: black;
-    color: white;
-    width: 80px;
-    margin-top: 25px;
-    
 
-}
-.btn:hover{
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 3px;
-    color: black;
-}
+
 .novedades div div div div{
     
     display: flex;
@@ -343,7 +331,7 @@ textarea {
     margin-top: 5px;
     color: white;
     background-color: black;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 5px;
     
 }
@@ -361,7 +349,6 @@ textarea {
 
 .pie>div {
     display: flex;
-    flex-direction: row;
     justify-content: center;
 
 
@@ -375,7 +362,6 @@ textarea {
 
 .pie h2 {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     margin-top: 30px;
 }
