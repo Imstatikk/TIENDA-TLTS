@@ -1,0 +1,48 @@
+$flexs:(
+    dp:flex,
+    flexD:column,
+    justifyI:center,
+    alignI:center,
+    justifyS:space-around
+    
+);
+/*----------CONTACTO-----------*/
+form {
+    width: auto;
+    fieldset {
+        height: 500px;
+        width: 500px;
+        display: map-get($map: $flexs, $key:dp );
+        flex-direction: map-get($map:$flexs , $key:flexD );
+        margin-left: 5px;
+        padding: 5px;
+        box-shadow: 0 0 7px 1px gray;
+        justify-content: map-get($map: $flexs, $key:justifyI );
+        align-items: map-get($map: $flexs, $key:alingI );
+        textarea {
+            height: 250px;
+            width: 250px;
+        }
+    }
+}
+.inputDatos {
+    width: 300px;
+}
+.inputBoton{
+    width: 100px;
+    height: 35px;
+    margin-right: 10px;
+    margin-top: 5px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    &:hover{
+        background-color: white;
+        color: black;
+    
+    
+    }
+
+    
+}

@@ -3,7 +3,7 @@ $flexs:(
     flexD:column,
     justifyI:center,
     alignI:center,
-    justifyS:space-around,
+    justifyS:space-around
     
 );
 .pie {
@@ -11,7 +11,8 @@ $flexs:(
     h2 {
         display: map-get($map: $flexs, $key:dp );
         justify-content: map-get($map: $flexs, $key:justifyI );
-
+        background-image: none;
+        font-size: 30px;
         margin-top: 30px;
     }
     div {
@@ -25,4 +26,21 @@ $flexs:(
             }
         }
     }
+}
+/*-----Border-iconos----*/
+
+$icons:(
+    twitter: 1px solid rgb(0, 187, 255),
+    facebook: 1px solid rgb(0, 81, 255),
+    instagram: 1px solid orange,
+    icono:1px solid rgb(0, 255, 0)
+);
+@each $icon, $borderIc in $icons {
+    .borderIcons#{$icon}
+    {
+        border:$borderIc ;
+        border-radius: 5px;
+        margin: 5px;
+    }
+    
 }

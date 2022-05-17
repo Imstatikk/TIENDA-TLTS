@@ -1,335 +1,178 @@
-@import "archivos/abrigos";
-@import "archivos/equals";
+@import "layout/footer";
+@import "layout/header";
 @import "layout/main";
-/*------MAP------*/
-
-$icons:(
-    twitter: 1px solid rgb(0, 187, 255),
-    facebook: 1px solid rgb(0, 81, 255),
-    instagram: 1px solid orange,
-    icono:1px solid rgb(0, 255, 0)
-);
-@each $icon, $borderIc in $icons {
-    .borderIcons#{$icon}
-    {
-        border:$borderIc ;
-        border-radius: 5px;
-        margin: 5px;
-    }
-    
-}
-/*-------MAP-GET-------*/
-$flexs:(
-    dp:flex,
-    flexD:column,
-    justifyI:center,
-    alignI:center,
-    justifyS:space-around
-    
-);
+@import "layout/contacto";
+@import "layout/preguntasfrec";
 
 
-/*-----EXTEND-----*/
-.boton{
-    width: 100px;
-    height: 35px;
-    color: white;
-    background-color: black;
-    border: 1px solid black;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 20px;
-    &:hover{
-        background-color: white;
-    color: black;
-    }
+@font-face {
+    font-family: bebas;
+    src: url(../fonts/BebasNeue-Regular.ttf);
 }
-.botonCard{
-    @extend .boton;
-    background-color: rgb(0, 0, 0);
-    color: rgb(89, 252, 108)
-}
-.botonInput{
-    @extend .boton;
-    background-color: white;
-    color: black;
-    margin: 5px;
-    &:hover{
-        background-color: black;
-        color: white;
-    }
 
-}
-/*------MIXIN------*/
-@mixin text ($alinear, $margin) {
-    text-align: $alinear;
-    margin-top: $margin;
-    
-}
-h1 {
-    background-color: rgb(0, 0, 0);
-    font-size: 60px;
-    color: chartreuse;
-    animation-duration: 0.7s;
-    animation-delay: 1ms;
-    animation-iteration-count: 1;
-    animation-name: agrandar;
-    animation-timing-function: ease-in;
-    margin-top: 45px;
-    height: 80px;
-    @include text (center, 10px);
-}
-h2 {
-    @include text(center, 10px);
-    color: rgb(0, 0, 0);
-    font-size: 50px;
-    background-image: linear-gradient(to left, white, rgb(168, 248, 106), white);
-    margin-top: 10px;
-    width: 100%;
-}
-h5{
-    @include text(center, 10px)
-}
-/*----*/
 body {
     background-color: rgb(255, 255, 255);
+    font-family: bebas;
+    
 }
 
-.headerNav {
-    grid-area: header;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
+/*-------GRIDS--------*/
+#grilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr auto 0.5fr;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+}
+/*-----MEDIA-QUERIES-----*/
 
-    nav {
-        div {
-            background-color: white;
+@media (max-width: 990px) {
 
-            div {
-                button {
-                    background-color: black;
-                    color: white;
-                    display: map-get($map: $flexs, $key:dp );
-                    justify-content:map-get($map: $flexs, $key:justifyI ) ;
-                    align-items: map-get($map: $flexs, $key:alignI );
-                    
-                    &:hover {
-                        background-color: white;
-                        color: black;
-                        border: black solid 1px;
-                    }
-                }
-
-                form {
-                    margin-top: 20px;
-                    display: map-get($map: $flexs, $key:dp );
-                    justify-content:map-get($map: $flexs, $key:justifyI ) ;
-                    align-items: map-get($map: $flexs, $key:alignI );
-                    height: 30px;
-                }
-
-                ul {
-                    font-style: italic;
-                    list-style: none;
-
-                    li {
-                        margin-top: 30px;
-                        margin-right: 20px;
-
-                        a {
-                            color: rgb(0, 0, 0);
-                            text-decoration: none;
-                            font-size: 30px;
-                            background-image: linear-gradient(currentColor, currentColor);
-                            background-position: 0% 100%;
-                            background-repeat: no-repeat;
-                            background-size: 0% 2px;
-                            transition: 0.3s;
-
-                            &:hover {
-                                background-size: 100% 2px;
-                            }
-
-
-                        }
-                    }
-                }
-            }
-        }
+    .novedades h3 {
+        color: black;
     }
+
+    .novedades p {
+        color: black;
+    }
+
+    .headerNav nav ul li a {
+        font-size: 28px;
+
+    }
+
+    .novedades img{
+        height: 300px;
+    width: 300px;
+    }
+
 }
 
-.main {
-    grid-area: main;
 
-    .novedades {
-        display: map-get($map:$flexs , $key:dp );
-        justify-content: map-get($map: $flexs, $key:justifyS );
-        flex-direction: map-get($map: $flexs, $key:flexD);
+@media (max-width:901px) {
+    .headerNav nav ul li {
+        margin: 6px;
+    }
 
-        div {
-            margin-top: 10px;
-
-            div {
-                display: map-get($map: $flexs, $key:dp );
-                    justify-content:map-get($map: $flexs, $key:justifyI ) ;
-                    align-items: map-get($map: $flexs, $key:alignI );
-
-                div {
-                    .card {
-                        border-radius: 0px;
-                        border: none;
-                        box-shadow: 0 0 10px 1px rgb(238, 237, 237);
-
-                        img {
-
-                            transition: 0.5s;
-                            height: 300px;
-                            width: 300px;
-                            margin-top: 40px;
-
-                            &:hover {
-                                transform: scale(1.05);
-
-                            }
+    .headerNav nav ul li a {
+        font-size: 22px;
+    }
 
 
-                        }
+}
 
-                        div {
-                            flex-direction: map-get($map: $flexs, $key:flexD );
-                            display: map-get($map: $flexs, $key:dp );
-                             justify-content:map-get($map: $flexs, $key:justifyI ) ;
-                            align-items: map-get($map: $flexs, $key:alignI );
-                            
-
-                            .card-text {
-
-                                color: rgb(0, 0, 0);
-                                margin: 7px;
-
-                            }
-
-                            a {
-                                text-decoration: none;
-                                background-color: black;
-                                color: white;
-                                width: 80px;
-                                margin-top: 25px;
-
-                                &:hover {
-                                    background-color: white;
-                                    border: 1px solid black;
-                                    border-radius: 3px;
-                                    color: black;
-                                }
-
-                            }
-
-                            .card-text {
-                                text-align: center;
+@media (max-width:685px) {
+    #grilla {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 0.25fr;
+        row-gap: 20px;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
 
 
-                            }
+    .headerNav nav ul {
+        flex-direction: column;
 
-                        }
+    }
 
-                    }
+    .novedades h3 {
+        font-size: 35px;
+    }
+    .accordion-item button{
+        font-size:40px;
+    }
+    .accordion-body{
+        font-size: 30px;
+    }
 
-                }
+    .novedades p {
+        font-size: 20px;
+    }
 
-            }
+    .pie h2 {
+        font-size: 35px;
+    }
+
+    .headerNav nav ul li a {
+        font-size: 30px;
+    }
+    .main section p{
+        font-size: 23px;
+    }
+    .preguntasF h3{
+        font-size: 40px;
+        
+    }
+
+
+    fieldset {
+        margin-right: 5px;
+    }
+    h1{
+        font-size: 50px;
+    }
+    @keyframes agrandar {
+        0% {
+            font-size: 10px;
         }
-
-        h2 {
-            text-align: center;
-            color: rgb(0, 0, 0);
+    
+        10% {
+            font-size: 15px;
+        }
+    
+        20% {
+            font-size: 20px;
+        }
+    
+        30% {
+            font-size: 25px
+        }
+    
+        40% {
+            font-size: 30px;
+        }
+    
+        50% {
+            font-size: 35px;
+        }
+    
+        60% {
+            font-size: 40px;
+        }
+    
+        70% {
+            font-size: 45px;
+        }
+    
+        80% {
             font-size: 50px;
-            background-image: linear-gradient(to left, white, rgb(168, 248, 106), white);
-            margin-top: 10px;
-            width: 100%;
         }
 
-        h1 {
-            background-color: rgb(0, 0, 0);
-            font-size: 60px;
-            color: chartreuse;
-            text-align: center;
-            animation-duration: 0.7s;
-            animation-delay: 1ms;
-            animation-iteration-count: 1;
-            animation-name: agrandar;
-            animation-timing-function: ease-in;
-            margin-top: 45px;
-            height: 80px;
-
-            @keyframes agrandar {
-                0% {
-                    font-size: 10px;
-                }
-
-                10% {
-                    font-size: 15px;
-                }
-
-                20% {
-                    font-size: 20px;
-                }
-
-                30% {
-                    font-size: 25px
-                }
-
-                40% {
-                    font-size: 30px;
-                }
-
-                50% {
-                    font-size: 35px;
-                }
-
-                60% {
-                    font-size: 40px;
-                }
-
-                70% {
-                    font-size: 45px;
-                }
-
-                80% {
-                    font-size: 50px;
-                }
-
-                90% {
-                    font-size: 55px;
-                }
-
-                100% {
-                    font-size: 60px;
-                }
-
-            }
-
-        }
-
-    }
 }
-.pie {
-    grid-area: footer;
-    h2 {
-        display: map-get($map: $flexs, $key:dp );
-        justify-content: map-get($map: $flexs, $key:justifyI );
+}
+@media (max-width:420px) {
 
-        margin-top: 30px;
+
+    .novedades h5{
+        font-size: 40px;
     }
-    div {
-        display: map-get($map: $flexs, $key:dp );
-                    justify-content:map-get($map: $flexs, $key:justifyI ) ;
-        a{
-            img {
-                width: 60px;
-                height: 60px;
-                margin: 30px;
-            }
-        }
+
+    .novedades h3 {
+        font-size: 40px;
     }
+
+    .novedades p {
+        font-size: 25px;
+    }
+    fieldset{
+        font-size: 25px;
+    }
+
+    
 }
