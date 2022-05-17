@@ -1,0 +1,35 @@
+$flexs:(
+    dp:flex,
+    flexD:column,
+    justifyI:center,
+    alignI:center,
+    justifyS:space-around
+    
+);
+/*---PREGUNTAS-FRECUENTES----*/
+.preguntasF {
+    text-align: center;
+    .accordion {
+        display: map-get($map: $flexs, $key:dp );
+        justify-content: map-get($map: $flexs, $key:justifyI );
+        flex-direction: map-get($map: $flexs, $key:flexD );
+        align-items: map-get($map: $flexs, $key:alingI );
+        .accordion-body{
+            width: 700px;
+            font-size: 25px;
+            .accordion-item button{
+                width: 700px;
+                display: map-get($map: $flexs, $key:dp );
+              justify-content: map-get($map:$flexs , $key:justifyI );
+              align-items: map-get($map:$flexs , $key:alignI );
+              font-size: 30px;
+            
+            }
+        }
+    }
+        
+      
+        
+      
+}
+

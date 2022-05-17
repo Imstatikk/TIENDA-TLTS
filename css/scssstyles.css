@@ -1,16 +1,20 @@
-#grilla {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr auto 0.5fr;
-  grid-template-areas: "header header header" "main main main" "footer footer footer"; }
+.pie {
+  grid-area: footer; }
+  .pie h2 {
+    display: flex;
+    justify-content: center;
+    background-image: none;
+    font-size: 30px;
+    margin-top: 30px; }
+  .pie div {
+    display: flex;
+    justify-content: center; }
+    .pie div a img {
+      width: 60px;
+      height: 60px;
+      margin: 30px; }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "bebas"; }
-
-/*------MAP------*/
+/*-----Border-iconos----*/
 .borderIconstwitter {
   border: 1px solid #00bbff;
   border-radius: 5px;
@@ -30,65 +34,6 @@
   border: 1px solid lime;
   border-radius: 5px;
   margin: 5px; }
-
-/*-------MAP-GET-------*/
-/*-----EXTEND-----*/
-.boton, .botonCard, .botonInput {
-  width: 100px;
-  height: 35px;
-  color: white;
-  background-color: black;
-  border: 1px solid black;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 20px; }
-  .boton:hover, .botonCard:hover, .botonInput:hover {
-    background-color: white;
-    color: black; }
-
-.botonCard {
-  background-color: black;
-  color: #59fc6c; }
-
-.botonInput {
-  background-color: white;
-  color: black;
-  margin: 5px; }
-  .botonInput:hover {
-    background-color: black;
-    color: white; }
-
-/*------MIXIN------*/
-h1 {
-  background-color: black;
-  font-size: 60px;
-  color: chartreuse;
-  animation-duration: 0.7s;
-  animation-delay: 1ms;
-  animation-iteration-count: 1;
-  animation-name: agrandar;
-  animation-timing-function: ease-in;
-  margin-top: 45px;
-  height: 80px;
-  text-align: center;
-  margin-top: 10px; }
-
-h2 {
-  text-align: center;
-  margin-top: 10px;
-  color: black;
-  font-size: 50px;
-  background-image: linear-gradient(to left, white, #a8f86a, white);
-  margin-top: 10px;
-  width: 100%; }
-
-h5 {
-  text-align: center;
-  margin-top: 10px; }
-
-/*----*/
-body {
-  background-color: white; }
 
 .headerNav {
   grid-area: header;
@@ -132,6 +77,11 @@ body {
 
 .main {
   grid-area: main; }
+  .main .centrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
   .main .novedades {
     display: flex;
     justify-content: space-around;
@@ -142,57 +92,49 @@ body {
         display: flex;
         justify-content: center;
         align-items: center; }
-        .main .novedades div div div .card {
+        .main .novedades div div .card {
           border-radius: 0px;
           border: none;
           box-shadow: 0 0 10px 1px #eeeded; }
-          .main .novedades div div div .card img {
+          .main .novedades div div .card img {
             transition: 0.5s;
             height: 300px;
             width: 300px;
             margin-top: 40px; }
-            .main .novedades div div div .card img:hover {
+            .main .novedades div div .card img:hover {
               transform: scale(1.05); }
-          .main .novedades div div div .card div {
-            flex-direction: column;
+          .main .novedades div div .card .card-body {
             display: flex;
             justify-content: center;
+            flex-direction: column;
             align-items: center; }
-            .main .novedades div div div .card div .card-text {
+            .main .novedades div div .card .card-body .card-text {
               color: black;
-              margin: 7px; }
-            .main .novedades div div div .card div a {
+              margin: 7px;
+              text-align: center; }
+            .main .novedades div div .card .card-body a {
               text-decoration: none;
-              background-color: black;
-              color: white;
               width: 80px;
               margin-top: 25px; }
-              .main .novedades div div div .card div a:hover {
-                background-color: white;
-                border: 1px solid black;
-                border-radius: 3px;
-                color: black; }
-            .main .novedades div div div .card div .card-text {
-              text-align: center; }
-    .main .novedades h2 {
-      text-align: center;
-      color: black;
-      font-size: 50px;
-      background-image: linear-gradient(to left, white, #a8f86a, white);
-      margin-top: 10px;
-      width: 100%; }
-    .main .novedades h1 {
-      background-color: black;
-      font-size: 60px;
-      color: chartreuse;
-      text-align: center;
-      animation-duration: 0.7s;
-      animation-delay: 1ms;
-      animation-iteration-count: 1;
-      animation-name: agrandar;
-      animation-timing-function: ease-in;
-      margin-top: 45px;
-      height: 80px; }
+  .main h2 {
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    background-image: linear-gradient(to left, white, #a8f86a, white);
+    margin-top: 10px;
+    width: 100%; }
+  .main h1 {
+    background-color: black;
+    font-size: 60px;
+    color: chartreuse;
+    text-align: center;
+    animation-duration: 0.7s;
+    animation-delay: 1ms;
+    animation-iteration-count: 1;
+    animation-name: agrandar;
+    animation-timing-function: ease-in;
+    margin-top: 45px;
+    height: 80px; }
 
 @keyframes agrandar {
   0% {
@@ -218,16 +160,217 @@ body {
   100% {
     font-size: 60px; } }
 
-.pie {
-  grid-area: footer; }
-  .pie h2 {
+/*-----EXTEND-CLASE-BOTONES-----*/
+.boton, .botonCard, .botonInput {
+  width: 100px;
+  height: 35px;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px; }
+  .boton:hover, .botonCard:hover, .botonInput:hover {
+    background-color: white;
+    color: black; }
+
+.botonCard {
+  background-color: black;
+  color: #59fc6c; }
+
+.botonInput {
+  background-color: white;
+  color: black;
+  margin: 5px; }
+  .botonInput:hover {
+    background-color: black;
+    color: white; }
+
+/*----MIXIN-H---*/
+h1 {
+  background-color: black;
+  font-size: 60px;
+  color: chartreuse;
+  animation-duration: 0.7s;
+  animation-delay: 1ms;
+  animation-iteration-count: 1;
+  animation-name: agrandar;
+  animation-timing-function: ease-in;
+  margin-top: 45px;
+  height: 80px;
+  text-align: center;
+  margin-top: 10px; }
+
+h2 {
+  text-align: center;
+  margin-top: 10px;
+  color: black;
+  font-size: 50px;
+  background-image: linear-gradient(to left, white, #a8f86a, white);
+  margin-top: 10px;
+  width: 100%; }
+
+h5 {
+  text-align: center;
+  margin-top: 10px; }
+
+/*-------HERO-INDEX------*/
+.hero {
+  display: flex;
+  flex-direction: column;
+  background: url(../images/fondo.jpg);
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  align-items: center; }
+  .hero p {
+    color: black;
+    font-size: 40px; }
+  .hero img {
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin-top: 50px; }
+
+/*----------CONTACTO-----------*/
+form {
+  width: auto; }
+  form fieldset {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    padding: 5px;
+    box-shadow: 0 0 7px 1px gray;
+    justify-content: center; }
+    form fieldset textarea {
+      height: 250px;
+      width: 250px; }
+
+.inputDatos {
+  width: 300px; }
+
+.inputBoton {
+  width: 100px;
+  height: 35px;
+  margin-right: 10px;
+  margin-top: 5px;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 5px; }
+  .inputBoton:hover {
+    background-color: white;
+    color: black; }
+
+/*---PREGUNTAS-FRECUENTES----*/
+.preguntasF {
+  text-align: center; }
+  .preguntasF .accordion {
     display: flex;
     justify-content: center;
-    margin-top: 30px; }
-  .pie div {
-    display: flex;
-    justify-content: center; }
-    .pie div a img {
-      width: 60px;
-      height: 60px;
-      margin: 30px; }
+    flex-direction: column; }
+    .preguntasF .accordion .accordion-body {
+      width: 700px;
+      font-size: 25px; }
+      .preguntasF .accordion .accordion-body .accordion-item button {
+        width: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px; }
+
+@font-face {
+  font-family: bebas;
+  src: url(../fonts/BebasNeue-Regular.ttf); }
+
+body {
+  background-color: white;
+  font-family: bebas; }
+
+/*-------GRIDS--------*/
+#grilla {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr auto 0.5fr;
+  grid-template-areas: "header header header" "main main main" "footer footer footer"; }
+
+/*-----MEDIA-QUERIES-----*/
+@media (max-width: 990px) {
+  .novedades h3 {
+    color: black; }
+  .novedades p {
+    color: black; }
+  .headerNav nav ul li a {
+    font-size: 28px; }
+  .novedades img {
+    height: 300px;
+    width: 300px; } }
+
+@media (max-width: 901px) {
+  .headerNav nav ul li {
+    margin: 6px; }
+  .headerNav nav ul li a {
+    font-size: 22px; } }
+
+@media (max-width: 685px) {
+  #grilla {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 0.25fr;
+    row-gap: 20px;
+    grid-template-areas: "header" "main" "footer"; }
+  .headerNav nav ul {
+    flex-direction: column; }
+  .novedades h3 {
+    font-size: 35px; }
+  .accordion-item button {
+    font-size: 40px; }
+  .accordion-body {
+    font-size: 30px; }
+  .novedades p {
+    font-size: 20px; }
+  .pie h2 {
+    font-size: 35px; }
+  .headerNav nav ul li a {
+    font-size: 30px; }
+  .main section p {
+    font-size: 23px; }
+  .preguntasF h3 {
+    font-size: 40px; }
+  fieldset {
+    margin-right: 5px; }
+  h1 {
+    font-size: 50px; }
+  @keyframes agrandar {
+    0% {
+      font-size: 10px; }
+    10% {
+      font-size: 15px; }
+    20% {
+      font-size: 20px; }
+    30% {
+      font-size: 25px; }
+    40% {
+      font-size: 30px; }
+    50% {
+      font-size: 35px; }
+    60% {
+      font-size: 40px; }
+    70% {
+      font-size: 45px; }
+    80% {
+      font-size: 50px; } } }
+
+@media (max-width: 420px) {
+  .novedades h5 {
+    font-size: 40px; }
+  .novedades h3 {
+    font-size: 40px; }
+  .novedades p {
+    font-size: 25px; }
+  fieldset {
+    font-size: 25px; } }
