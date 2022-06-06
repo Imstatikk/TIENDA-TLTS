@@ -1,46 +1,53 @@
-$flexs:(
-    dp:flex,
-    flexD:column,
-    justifyI:center,
-    alignI:center,
-    justifyS:space-around
-    
-);
+@import url("../archivos/_variables.scss");
+
 .pie {
     grid-area: footer;
+
     h2 {
-        display: map-get($map: $flexs, $key:dp );
-        justify-content: map-get($map: $flexs, $key:justifyI );
+        display: map-get($map: $flexs, $key: dp);
+        justify-content: map-get($map: $flexs, $key: justifyI);
         background-image: none;
         font-size: 30px;
         margin-top: 30px;
+        color: white;
+        background-color: black;
     }
+
     div {
-        display: map-get($map: $flexs, $key:dp );
-                    justify-content:map-get($map: $flexs, $key:justifyI ) ;
-        a{
+        display: map-get($map: $flexs, $key: dp);
+        justify-content: map-get($map: $flexs, $key: justifyI);
+
+
+        a {
+            margin: 20px;
+
             img {
                 width: 60px;
                 height: 60px;
-                margin: 30px;
+                margin: 20px;
+
+                &:hover {
+                    transform: scale(1.05);
+
+                }
             }
         }
     }
 }
+
 /*-----Border-iconos----*/
 
-$icons:(
-    twitter: 1px solid rgb(0, 187, 255),
-    facebook: 1px solid rgb(0, 81, 255),
-    instagram: 1px solid orange,
-    icono:1px solid rgb(0, 255, 0)
+$icons: (
+    twitter: 0 0 5px 1px rgb(150, 215, 238),
+    facebook: 0 0 5px 1px rgb(145, 163, 243),
+    instagram: 0 0 5px 1px rgb(245, 178, 133),
 );
-@each $icon, $borderIc in $icons {
-    .borderIcons#{$icon}
-    {
-        border:$borderIc ;
-        border-radius: 5px;
+
+@each $icon,
+$borderIc in $icons {
+    .borderIcons#{$icon} {
+        box-shadow: $borderIc ;
         margin: 5px;
     }
-    
+
 }

@@ -13,7 +13,7 @@
 body {
     background-color: rgb(255, 255, 255);
     font-family: bebas;
-    
+
 }
 
 /*-------GRIDS--------*/
@@ -26,6 +26,7 @@ body {
         "main main main"
         "footer footer footer";
 }
+
 /*-----MEDIA-QUERIES-----*/
 
 @media (max-width: 990px) {
@@ -43,9 +44,9 @@ body {
 
     }
 
-    .novedades img{
+    .novedades img {
         height: 300px;
-    width: 300px;
+        width: 300px;
     }
 
 }
@@ -60,8 +61,20 @@ body {
         font-size: 22px;
     }
 
+    .section2 {
+        div {
+            img {
+                height: 80%;
+                width: 100%;
 
+
+            }
+        }
+    }
 }
+
+
+
 
 @media (max-width:685px) {
     #grilla {
@@ -77,17 +90,19 @@ body {
 
 
     .headerNav nav ul {
-        flex-direction: column;
+        flex-direction: map-get($map: $flexs, $key:flexD );
 
     }
 
     .novedades h3 {
         font-size: 35px;
     }
-    .accordion-item button{
-        font-size:40px;
+
+    .accordion-item button {
+        font-size: 40px;
     }
-    .accordion-body{
+
+    .accordion-body {
         font-size: 30px;
     }
 
@@ -102,64 +117,81 @@ body {
     .headerNav nav ul li a {
         font-size: 30px;
     }
-    .main section p{
+
+    .main section p {
         font-size: 23px;
     }
-    .preguntasF h3{
+
+    .preguntasF h3 {
         font-size: 40px;
-        
+
     }
 
 
     fieldset {
         margin-right: 5px;
     }
-    h1{
-        font-size: 50px;
-    }
+
+
     @keyframes agrandar {
         0% {
             font-size: 10px;
         }
-    
+
         10% {
             font-size: 15px;
         }
-    
+
         20% {
             font-size: 20px;
         }
-    
+
         30% {
             font-size: 25px
         }
-    
+
         40% {
             font-size: 30px;
         }
-    
+
         50% {
             font-size: 35px;
         }
-    
+
         60% {
             font-size: 40px;
         }
-    
+
         70% {
             font-size: 45px;
         }
-    
+
         80% {
             font-size: 50px;
         }
 
+    }
+    .section2 {
+        div {
+            
+           .buttonImg{
+               width: 80%;
+
+           }
+           .buttonImg2{
+               width: 80%;
+           }
+        
+        }
+    }
+
+
 }
-}
+
 @media (max-width:420px) {
 
 
-    .novedades h5{
+    .novedades h5 {
         font-size: 40px;
     }
 
@@ -170,9 +202,32 @@ body {
     .novedades p {
         font-size: 25px;
     }
-    fieldset{
+
+    fieldset {
         font-size: 25px;
     }
 
-    
+    .accordion-body {
+        font-size: 30px;
+    }
+
+    .accordion-item button {
+
+        font-size: 35px;
+
+    }
+    .section2 {
+        div {
+            
+           .buttonImg{
+               width: 100%;
+
+           }
+           .buttonImg2{
+               width: 100%;
+           }
+        
+        }
+    }
+
 }

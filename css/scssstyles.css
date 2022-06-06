@@ -5,34 +5,32 @@
     justify-content: center;
     background-image: none;
     font-size: 30px;
-    margin-top: 30px; }
+    margin-top: 30px;
+    color: white;
+    background-color: black; }
   .pie div {
     display: flex;
     justify-content: center; }
-    .pie div a img {
-      width: 60px;
-      height: 60px;
-      margin: 30px; }
+    .pie div a {
+      margin: 20px; }
+      .pie div a img {
+        width: 60px;
+        height: 60px;
+        margin: 20px; }
+        .pie div a img:hover {
+          transform: scale(1.05); }
 
 /*-----Border-iconos----*/
 .borderIconstwitter {
-  border: 1px solid #00bbff;
-  border-radius: 5px;
+  box-shadow: 0 0 5px 1px #96d7ee;
   margin: 5px; }
 
 .borderIconsfacebook {
-  border: 1px solid #0051ff;
-  border-radius: 5px;
+  box-shadow: 0 0 5px 1px #91a3f3;
   margin: 5px; }
 
 .borderIconsinstagram {
-  border: 1px solid orange;
-  border-radius: 5px;
-  margin: 5px; }
-
-.borderIconsicono {
-  border: 1px solid lime;
-  border-radius: 5px;
+  box-shadow: 0 0 5px 1px #f5b285;
   margin: 5px; }
 
 .headerNav {
@@ -56,17 +54,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 30px; }
+      height: 30px;
+      width: 300px; }
     .headerNav nav div div ul {
       font-style: italic;
       list-style: none; }
       .headerNav nav div div ul li {
         margin-top: 30px;
-        margin-right: 20px; }
+        margin-right: 13px; }
         .headerNav nav div div ul li a {
           color: black;
           text-decoration: none;
-          font-size: 30px;
+          font-size: 27px;
           background-image: linear-gradient(currentColor, currentColor);
           background-position: 0% 100%;
           background-repeat: no-repeat;
@@ -87,7 +86,8 @@
     justify-content: space-around;
     flex-direction: column; }
     .main .novedades div {
-      margin-top: 10px; }
+      margin-top: 20px;
+      margin-bottom: 20px; }
       .main .novedades div div {
         display: flex;
         justify-content: center;
@@ -125,7 +125,7 @@
     width: 100%; }
   .main h1 {
     background-color: black;
-    font-size: 60px;
+    font-size: 52px;
     color: chartreuse;
     text-align: center;
     animation-duration: 0.7s;
@@ -159,6 +159,39 @@
     font-size: 55px; }
   100% {
     font-size: 60px; } }
+
+/*-----SECTION-2-INDEX-----*/
+.section2 {
+  grid-area: main; }
+  .section2 div {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .section2 div .buttonImg {
+      background-image: url(../images/section2g.jpg);
+      box-shadow: 0 0 10px 2px #727272;
+      width: 700px;
+      height: 600px;
+      background-size: cover;
+      margin: 20px; }
+    .section2 div button {
+      border: 1px solid black;
+      font-size: 20px;
+      background-color: black;
+      border-radius: 5px;
+      color: white; }
+      .section2 div button:hover {
+        transform: scale(1.05); }
+      .section2 div button a {
+        text-decoration: none;
+        color: white; }
+    .section2 div .buttonImg2 {
+      background-image: url(../images/section2i.jpg);
+      box-shadow: 0 0 10px 2px #727272;
+      margin: 20px;
+      width: 700px;
+      height: 600px;
+      background-size: cover; }
 
 /*-----EXTEND-CLASE-BOTONES-----*/
 .boton, .botonCard, .botonInput {
@@ -235,53 +268,67 @@ h5 {
     margin-top: 50px; }
 
 /*----------CONTACTO-----------*/
-form {
-  width: auto; }
-  form fieldset {
+section p {
+  text-align: center; }
+
+section form {
+  display: flex;
+  justify-content: center; }
+  section form fieldset {
     height: 500px;
-    width: 500px;
+    width: 700px;
     display: flex;
     flex-direction: column;
     margin-left: 5px;
     padding: 5px;
-    box-shadow: 0 0 7px 1px gray;
-    justify-content: center; }
-    form fieldset textarea {
+    justify-content: center;
+    align-items: center; }
+    section form fieldset textarea {
       height: 250px;
-      width: 250px; }
+      width: 500px;
+      border: 1px solid #afafaf;
+      border-radius: 10px;
+      padding: 5px; }
+    section form fieldset legend {
+      text-align: center;
+      font-size: 40px; }
 
 .inputDatos {
-  width: 300px; }
+  width: 300px;
+  border: 1px solid #afafaf;
+  border-radius: 14px;
+  margin: 5px;
+  padding: 8px;
+  width: 50%;
+  height: 35px; }
 
-.inputBoton {
-  width: 100px;
-  height: 35px;
-  margin-right: 10px;
-  margin-top: 5px;
+.botonInput {
+  margin: 10px;
   color: white;
-  background-color: black;
-  border: 1px solid black;
-  border-radius: 5px; }
-  .inputBoton:hover {
+  background-color: black; }
+  .botonInput:hover {
     background-color: white;
     color: black; }
+
+.sexRadio {
+  margin: 10px; }
 
 /*---PREGUNTAS-FRECUENTES----*/
 .preguntasF {
   text-align: center; }
-  .preguntasF .accordion {
-    display: flex;
-    justify-content: center;
-    flex-direction: column; }
-    .preguntasF .accordion .accordion-body {
-      width: 700px;
-      font-size: 25px; }
-      .preguntasF .accordion .accordion-body .accordion-item button {
-        width: 700px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 30px; }
+
+.pregMain {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .pregMain .accordion {
+    width: 70%; }
+    .pregMain .accordion .accordion-body {
+      font-size: 20px; }
+    .pregMain .accordion .accordion-button {
+      font-size: 27px; }
 
 @font-face {
   font-family: bebas;
@@ -314,7 +361,10 @@ body {
   .headerNav nav ul li {
     margin: 6px; }
   .headerNav nav ul li a {
-    font-size: 22px; } }
+    font-size: 22px; }
+  .section2 div img {
+    height: 80%;
+    width: 100%; } }
 
 @media (max-width: 685px) {
   #grilla {
@@ -343,8 +393,6 @@ body {
     font-size: 40px; }
   fieldset {
     margin-right: 5px; }
-  h1 {
-    font-size: 50px; }
   @keyframes agrandar {
     0% {
       font-size: 10px; }
@@ -363,7 +411,11 @@ body {
     70% {
       font-size: 45px; }
     80% {
-      font-size: 50px; } } }
+      font-size: 50px; } }
+  .section2 div .buttonImg {
+    width: 80%; }
+  .section2 div .buttonImg2 {
+    width: 80%; } }
 
 @media (max-width: 420px) {
   .novedades h5 {
@@ -373,4 +425,12 @@ body {
   .novedades p {
     font-size: 25px; }
   fieldset {
-    font-size: 25px; } }
+    font-size: 25px; }
+  .accordion-body {
+    font-size: 30px; }
+  .accordion-item button {
+    font-size: 35px; }
+  .section2 div .buttonImg {
+    width: 100%; }
+  .section2 div .buttonImg2 {
+    width: 100%; } }

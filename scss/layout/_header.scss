@@ -1,11 +1,5 @@
-$flexs:(
-    dp:flex,
-    flexD:column,
-    justifyI:center,
-    alignI:center,
-    justifyS:space-around
-    
-);
+@import url("../archivos/_variables.scss");
+
 .headerNav {
     grid-area: header;
     background-color: rgb(255, 255, 255);
@@ -19,10 +13,10 @@ $flexs:(
                 button {
                     background-color: black;
                     color: white;
-                    display: map-get($map: $flexs, $key:dp );
-                    justify-content:map-get($map: $flexs, $key:justifyI ) ;
-                    align-items: map-get($map: $flexs, $key:alignI );
-                    
+                    display: map-get($map: $flexs, $key: dp);
+                    justify-content: map-get($map: $flexs, $key: justifyI);
+                    align-items: map-get($map: $flexs, $key: alignI);
+
                     &:hover {
                         background-color: white;
                         color: black;
@@ -32,10 +26,11 @@ $flexs:(
 
                 form {
                     margin-top: 20px;
-                    display: map-get($map: $flexs, $key:dp );
-                    justify-content:map-get($map: $flexs, $key:justifyI ) ;
-                    align-items: map-get($map: $flexs, $key:alignI );
+                    display: map-get($map: $flexs, $key: dp);
+                    justify-content: map-get($map: $flexs, $key: justifyI);
+                    align-items: map-get($map: $flexs, $key: alignI);
                     height: 30px;
+                    width: 300px;
                 }
 
                 ul {
@@ -44,12 +39,13 @@ $flexs:(
 
                     li {
                         margin-top: 30px;
-                        margin-right: 20px;
+                        margin-right: 13px;
+
 
                         a {
                             color: rgb(0, 0, 0);
                             text-decoration: none;
-                            font-size: 30px;
+                            font-size: 27px;
                             background-image: linear-gradient(currentColor, currentColor);
                             background-position: 0% 100%;
                             background-repeat: no-repeat;

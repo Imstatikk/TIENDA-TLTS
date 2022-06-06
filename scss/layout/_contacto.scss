@@ -1,48 +1,65 @@
-$flexs:(
-    dp:flex,
-    flexD:column,
-    justifyI:center,
-    alignI:center,
-    justifyS:space-around
-    
-);
+@import url("../archivos/_variables.scss");
+
 /*----------CONTACTO-----------*/
-form {
-    width: auto;
-    fieldset {
-        height: 500px;
-        width: 500px;
-        display: map-get($map: $flexs, $key:dp );
-        flex-direction: map-get($map:$flexs , $key:flexD );
-        margin-left: 5px;
-        padding: 5px;
-        box-shadow: 0 0 7px 1px gray;
-        justify-content: map-get($map: $flexs, $key:justifyI );
-        align-items: map-get($map: $flexs, $key:alingI );
-        textarea {
-            height: 250px;
-            width: 250px;
+section {
+    p {
+        text-align: center;
+    }
+
+    form {
+        display: map-get($map: $flexs, $key: dp);
+        justify-content: map-get($map: $flexs, $key: justifyI);
+
+        fieldset {
+            height: 500px;
+            width: 700px;
+            display: map-get($map: $flexs, $key: dp);
+            flex-direction: map-get($map: $flexs , $key: flexD);
+            margin-left: 5px;
+            padding: 5px;
+            justify-content: map-get($map: $flexs, $key: justifyI);
+            align-items: map-get($map: $flexs, $key: alignI);
+
+            textarea {
+                height: 250px;
+                width: 500px;
+                border: 1px solid rgb(175, 175, 175);
+                border-radius: 10px;
+                padding: 5px;
+            }
+
+            legend {
+                text-align: center;
+                font-size: 40px;
+            }
+
         }
     }
 }
+
+
 .inputDatos {
     width: 300px;
-}
-.inputBoton{
-    width: 100px;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 14px;
+    margin: 5px;
+    padding: 8px;
+    width: 50%;
     height: 35px;
-    margin-right: 10px;
-    margin-top: 5px;
+}
+
+.botonInput {
+    margin: 10px;
     color: white;
     background-color: black;
-    border: 1px solid black;
-    border-radius: 5px;
-    &:hover{
+
+    &:hover {
         background-color: white;
         color: black;
-    
-    
     }
 
-    
+}
+
+.sexRadio {
+    margin: 10px;
 }
